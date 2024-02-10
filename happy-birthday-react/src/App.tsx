@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import LinkButton from "./children/link";
 
 function App() {
+  const title: string = "Happy Birthday!!";
+  const [num, setNum] = useState(0);
+
+  const increment = () => {
+    setNum(num + 1);
+    console.log(num);
+  };
+
+  const decrement = () => {
+    setNum(num - 1);
+    console.log(num);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{title}</h1>
+      Your Age: {num}
+      {/* <LinkButton text="+" link="/test" /> */}
+      <button type="button" onClick={increment}>
+        +
+      </button>
+      <button type="button" onClick={decrement}>
+        -
+      </button>
+      <p><img src={`${process.env.PUBLIC_URL}/cake.png`}></img></p>
     </div>
   );
 }
