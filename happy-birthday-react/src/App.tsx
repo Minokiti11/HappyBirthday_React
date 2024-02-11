@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { createElement } from 'react';
 import "./App.css";
 // import LinkButton from "./children/link";
-import PlantingCandle from "./candle";
 
 function App() {
   const title: string = "Happy Birthday!!";
@@ -15,6 +15,21 @@ function App() {
   const decrement = () => {
     setNum(num - 1);
     console.log(num);
+  };
+
+  const PlantingCandle = () => {
+    console.log("Planting Candle...");
+    return(
+      <div className="candle-ctn">
+        <div className="candle c1">
+          <div className="c-base"></div>
+          <div className="wick"></div>
+          <div className="flame"></div>
+          <div className="highlight"></div>
+        </div>
+      </div>
+    );
+    
   };
 
   return (
