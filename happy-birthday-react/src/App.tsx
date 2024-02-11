@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 // import LinkButton from "./children/link";
+import PlantingCandle from "./candle";
 
 function App() {
   const title: string = "Happy Birthday!!";
@@ -26,7 +27,9 @@ function App() {
       <button type="button" onClick={decrement}>
         -
       </button>
-      <div className="cake-body">
+      <div
+        className="cake-body"
+        onClick={()=>{PlantingCandle()}}>
         <div className="layer f1">
           <div className="spot-group sg1">
             <div className="spot s1"></div>
