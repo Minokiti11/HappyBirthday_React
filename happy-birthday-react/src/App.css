@@ -2,37 +2,182 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cake-body{
+  position:relative;
+  margin: 0 auto;
+  margin-top: 120px;
+  width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.layer{
+  display:block;
+  background:#FFA177;
+  height:50px;
+  width:300px;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  position:absolute;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.f1{
+  top:90px;
+  background:#774F38;
+  height:60px;
+}
+.f2{
+  top:60px;
+  background:#ECE5CE;
+  height:60px;
+}
+.f3{
+  top:30px;
+  background:#E08E79;
+  height:60px;
+}
+.f4{
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  background:#59280F;
+  top:6px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Cake Spots */
+
+.spot-group{
+  display:block;
+  height:14px;
+  width:14px;
+  position:absolute;
+}
+.spot{
+  display:block;
+  height:4px;
+  width:4px;
+  border-radius: 50%;
+  position:absolute;
+}
+.f1 .spot{
+  background:#8C5F45;
+}
+.f2 .spot{
+  background:#D6CFB6;
+}
+.f3 .spot{
+  background:#EB9E8A;
+}
+.sg1{
+  bottom:20px;
+  left:5px;
+}
+.s1{
+  top:2px;
+  left:10px;
+}
+.s2{
+  top:7px;
+  left:5px;
+}
+.s3{
+  left:2px;
+}
+.sg1{
+  bottom:20px;
+  left:5px;
+}
+.sg2{
+  bottom:20px;
+  right:10px;
+}
+.sg3{
+  bottom:21px;
+  left:6px;
+}
+.sg4{
+  bottom:11px;
+  right:33px;
+}
+.sg5{
+  bottom:15px;
+  left:25px;
+}
+.sg6{
+  bottom:20px;
+  right:10px;
+}
+/* Icing */
+
+.icing{
+  display:block;
+  height:50px;
+  width:150px;
+  border-radius: 50%;
+  background:#59280F;
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.29, #59280F), color-stop(0.8, #692F12));
+  position:absolute;
+  top:0px;
+  z-index:2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Icing Drips */
+
+.drip-ctn{
+  position:absolute;
+  top: 0;
+  z-index: 1;
+}
+
+/* Candles */
+
+.candle-ctn{
+  display:block;
+  width:150px;
+  height:80px;
+  position:absolute;
+  top:-30px;
+  z-index:3;
+}
+.candle{
+position:absolute;
+top:20px;
+left:70px;
+}
+.c-base{
+display:block;
+height:30px;
+width:10px;
+background:#5FEDB5;
+position:absolute;
+z-index:2;
+}
+.wick{
+display:block;
+width: 2px;
+height: 6px;
+background: #ccc;
+position: absolute;
+top: -5px;
+left: 4px;
+}
+.flame{
+display:block;
+height:16px;
+width:8px;
+ border-radius: 50%  50%  50%  50%  / 60%   60%   40%  40%;
+background:#FF9E00;
+position:absolute;
+top:-20px;
+left:1px;
+box-shadow: 0px 0px 20px yellow;
+}
+.highlight{
+display:block;
+height:30px;
+width:60px;
+background:#333;
+border-radius:50%;
+position:absolute;
+top:17px;
+left:-25px;
+background: -webkit-radial-gradient(center, ellipse cover, rgba(145,66,26,1) 0%,rgba(105,47,18,0) 80%);
+z-index:1;
 }
